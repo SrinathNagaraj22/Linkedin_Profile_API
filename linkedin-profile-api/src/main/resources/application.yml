@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: linkedin-profile-api
+
+linkedin:
+  base-url: https://www.linkedin.com
+  cookie: ${LINKEDIN_COOKIE:}
+  csrf-token: ${LINKEDIN_CSRF_TOKEN:}
+  connect-timeout-ms: 5000
+  read-timeout-ms: 8000
+
+profile-cache:
+  ttl-minutes: 60
+
+logging:
+  level:
+    root: INFO
+    com.tross.linkedinapi: DEBUG
